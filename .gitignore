@@ -1,0 +1,7 @@
+src/.vs/
+src/packages/
+src/SitecoreRollingLogFileAppender/bin/
+src/SitecoreRollingLogFileAppender/obj/
+*.pubxml
+*.user
+*.suo
