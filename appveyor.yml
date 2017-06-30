@@ -8,7 +8,7 @@ before_build:
 build:
   verbosity: normal
 deploy:
-  release: SitecoreRollingLogFileAppender-v$(appveyor_build_version)
+  release: SitecoreGadgets.SitecoreRollingLogFileAppender-v$(appveyor_build_version)
   description: 'log4net rolling log file appender for Sitecore'
   provider: GitHub
   auth_token:
@@ -20,5 +20,5 @@ deploy:
     branch: master
     appveyor_repo_tag: true
 artifacts:
-  - path: SitecoreRollingLogFileAppender.zip
-    name: SitecoreRollingLogFileAppender-v$(appveyor_build_version)
+  - path: SitecoreGadgets.SitecoreRollingLogFileAppender.zip
+    name: SitecoreGadgets.SitecoreRollingLogFileAppender-v$(appveyor_build_version)
