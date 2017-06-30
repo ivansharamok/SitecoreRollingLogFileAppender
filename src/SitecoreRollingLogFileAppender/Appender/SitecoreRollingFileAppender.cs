@@ -15,7 +15,7 @@
 
         public override string File
         {
-            get => base.File;
+            get { return base.File; }
             set
             {
                 if (this.OriginalFileName == null)
