@@ -20,5 +20,5 @@ deploy:
     branch: master
     appveyor_repo_tag: true
 artifacts:
-  - path: SitecoreGadgets.SitecoreRollingLogFileAppender.zip
+  - path: SitecoreRollingLogFileAppender.zip
     name: SitecoreGadgets.SitecoreRollingLogFileAppender-v$(appveyor_build_version)
