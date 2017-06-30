@@ -13,7 +13,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: TJ/Yref6RnJKEmAFwqG6wKbR2dE8hweC4GBlpOPLsAmVBLXDiomOGz4SNujxoK2f
-  artifact: /.*\.nupkg/
+  artifact: SitecoreGadgets.SitecoreRollingLogFileAppender-v$(appveyor_build_version)
   draft: false
   prerelease: true
   on:
