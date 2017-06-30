@@ -7,6 +7,8 @@ before_build:
   - cmd: nuget restore src\SitecoreGadgets.SitecoreRollingFileAppender.sln
 build:
   verbosity: normal
+after_build:
+  - cmd: 7z a SitecoreGadgets.SitecoreRollingLogFileAppender.zip %APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\SitecoreGadgets.SitecoreRollingLogFileAppender.* -ir %APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\App_Config
 deploy:
   release: v$(appveyor_build_version)
   description: 'log4net rolling log file appender for Sitecore'
@@ -20,5 +22,5 @@ deploy:
     branch: master
     appveyor_repo_tag: true
 artifacts:
-  - path: SitecoreRollingLogFileAppender.zip
+  - path: SitecoreGadgets.SitecoreRollingLogFileAppender.zip
     name: SitecoreGadgets.SitecoreRollingLogFileAppender-v$(appveyor_build_version)
