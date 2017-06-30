@@ -8,7 +8,7 @@ before_build:
 build:
   verbosity: normal
 after_build:
-  - cmd: 7z a SitecoreGadgets.SitecoreRollingLogFileAppender.zip %APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\SitecoreGadgets.SitecoreRollingLogFileAppender.* -ir %APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\App_Config
+  - cmd: 7z a SitecoreGadgets.SitecoreRollingLogFileAppender.zip %APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\SitecoreGadgets.SitecoreRollingLogFileAppender.* -ir!%APPVEYOR_BUILD_FOLDER%\src\SitecoreRollingLogFileAppender\bin\$(configuration)\App_Config
 deploy:
   release: v$(appveyor_build_version)
   description: 'log4net rolling log file appender for Sitecore'
