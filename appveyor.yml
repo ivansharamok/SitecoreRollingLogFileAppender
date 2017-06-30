@@ -1,5 +1,5 @@
 version: 1.0.{build}
-  configuration: Release
+configuration: Release
 platform: Any CPU
 install:
   - cmd: nuget sources add -Name SitecorePublicFeed -Source https://sitecore.myget.org/F/sc-packages/api/v3/index.json
